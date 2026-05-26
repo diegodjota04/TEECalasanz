@@ -40,11 +40,11 @@ export const MasterDashboard: React.FC<MasterDashboardProps> = ({ socket, electi
   const [resetConfirmError, setResetConfirmError] = useState<string>('');
 
   const [padronesConfig, setPadronesConfig] = useState<{ [key: string]: string }>({
-    table_1: '250',
-    table_2: '250',
-    table_3: '250',
-    table_4: '250',
-    table_5: '250'
+    table_1: '86',
+    table_2: '87',
+    table_3: '84',
+    table_4: '89',
+    table_5: '0'
   });
 
   // Estados de inicialización de partidos
