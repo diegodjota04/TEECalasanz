@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+}
+
+/* --- ESTILOS DE SOPORTE PREMIUM --- */
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, #0A467A 0%, #083c6b 50%, #062a4d 100%);
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: #f8fafc;
+}
+
+/* Efectos de Glassmorphism Claro y Nítido */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.02);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 20px 40px -15px rgba(6, 182, 212, 0.15);
+  transform: translateY(-2px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+}
+
+/* Gradientes de Texto y Botones */
+.text-glow-cyan {
+  text-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 15px rgba(255, 130, 0, 0.25);
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.bg-radial-purple {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 130, 0, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+/* Ocultar scrollbar por defecto pero dar soporte premium en scrollables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.08);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.3);
+}
+
+/* Animaciones personalizadas */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Luces de LED de Mesa */
+.led-active {
+  box-shadow: 0 0 12px #10b981, 0 0 4px #10b981;
+}
+
+.led-pending {
+  box-shadow: 0 0 12px #f97316, 0 0 4px #f97316;
+}
+
+/* Efectos 3D de Gráficos Circulares */
+.pie-3d-shadow {
+  filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.65));
+}

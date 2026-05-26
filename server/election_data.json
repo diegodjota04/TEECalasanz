@@ -1,0 +1,89 @@
+{
+  "electionClosed": false,
+  "initialized": true,
+  "activeTablesCount": 5,
+  "partiesConfig": {
+    "SUMA": {
+      "name": "Partido SUMA",
+      "color": "#06b6d4",
+      "secondaryColor": "#0891b2",
+      "flag": "/assets/suma_flag.png",
+      "mascot": "/assets/suma_mascot.png",
+      "presidentName": "Helena Bermúdez",
+      "presidentPhoto": "/assets/suma_president.png"
+    },
+    "MISH": {
+      "name": "Partido MISH",
+      "color": "#FF8200",
+      "secondaryColor": "#EA580C",
+      "flag": "/assets/mish_flag.png",
+      "mascot": "/assets/mish_mascot.png",
+      "presidentName": "Maximiliano Corella",
+      "presidentPhoto": "/assets/mish_president.png"
+    }
+  },
+  "revealed": {
+    "metrics": true,
+    "validosChart": true,
+    "globalesChart": true,
+    "tables": {
+      "table_1": false,
+      "table_2": false,
+      "table_3": false,
+      "table_4": false,
+      "table_5": false
+    }
+  },
+  "tables": {
+    "table_1": {
+      "padron": 250,
+      "suma": 0,
+      "mish": 0,
+      "blancos": 0,
+      "nulos": 0,
+      "noUso": 0,
+      "ingresado": false,
+      "updatedAt": null
+    },
+    "table_2": {
+      "padron": 250,
+      "suma": 0,
+      "mish": 0,
+      "blancos": 0,
+      "nulos": 0,
+      "noUso": 0,
+      "ingresado": false,
+      "updatedAt": null
+    },
+    "table_3": {
+      "padron": 250,
+      "suma": 0,
+      "mish": 0,
+      "blancos": 0,
+      "nulos": 0,
+      "noUso": 0,
+      "ingresado": false,
+      "updatedAt": null
+    },
+    "table_4": {
+      "padron": 250,
+      "suma": 0,
+      "mish": 0,
+      "blancos": 0,
+      "nulos": 0,
+      "noUso": 0,
+      "ingresado": false,
+      "updatedAt": null
+    },
+    "table_5": {
+      "padron": 250,
+      "suma": 0,
+      "mish": 0,
+      "blancos": 0,
+      "nulos": 0,
+      "noUso": 0,
+      "ingresado": false,
+      "updatedAt": null
+    }
+  }
+}
