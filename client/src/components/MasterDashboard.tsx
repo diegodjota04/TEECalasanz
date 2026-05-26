@@ -1018,11 +1018,11 @@ export const MasterDashboard: React.FC<MasterDashboardProps> = ({ socket, electi
                       ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-600 hover:bg-cyan-500/20'
                       : 'bg-orange-500/10 border-orange-500/30 text-orange-600 hover:bg-orange-500/20'
                       }`}
-                    title={showValidosChart ? 'Ocultar Torta Votos Válidos' : 'Develar Torta Votos Válidos'}
+                    title={showValidosChart ? 'Ocultar Gráfico de Votos Válidos' : 'Develar Gráfico de Votos Válidos'}
                   >
                     {showValidosChart ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
                   </button>
-                  <span className="text-xs font-semibold text-slate-700">Torta Válidos</span>
+                  <span className="text-xs font-semibold text-slate-700">Gráfico de Válidos</span>
                 </div>
 
                 {/* Toggle Gráfico Global */}
@@ -1033,11 +1033,11 @@ export const MasterDashboard: React.FC<MasterDashboardProps> = ({ socket, electi
                       ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-600 hover:bg-cyan-500/20'
                       : 'bg-orange-500/10 border-orange-500/30 text-orange-600 hover:bg-orange-500/20'
                       }`}
-                    title={showGlobalesChart ? 'Ocultar Torta Global' : 'Develar Torta Global'}
+                    title={showGlobalesChart ? 'Ocultar Gráfico de Global' : 'Develar Gráfico de Global'}
                   >
                     {showGlobalesChart ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
                   </button>
-                  <span className="text-xs font-semibold text-slate-700">Torta Global</span>
+                  <span className="text-xs font-semibold text-slate-700">Gráfico de Global</span>
                 </div>
               </div>
             </div>

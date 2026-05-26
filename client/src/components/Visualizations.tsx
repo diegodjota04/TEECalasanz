@@ -43,7 +43,7 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
     return [x, y];
   };
 
-  // Renderizar segmentos de torta
+  // Renderizar segmentos de Gráfico de
   const renderPieSegments = (data: { value: number; color: string; label: string }[]) => {
     const sum = data.reduce((acc, d) => acc + d.value, 0);
     if (sum === 0) {
@@ -91,7 +91,7 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
       {/* 1. GRÁFICO DE BARRAS PRINCIPAL */}
       <div className="glass-panel p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between col-span-1 lg:col-span-1 min-h-[380px]">
         <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#06b6d4] to-[#FF8200]" />
-        
+
         {!toggles.showMetrics ? (
           <div className="flex-grow flex flex-col items-center justify-center text-center p-4 space-y-4 my-auto h-full w-full">
             <div className="w-16 h-16 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center text-cyan-600 animate-pulse shadow-sm">
@@ -111,10 +111,10 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
                 <h3 className="text-lg font-bold text-slate-800 mb-1">Métricas Generales</h3>
                 <p className="text-xs text-slate-500 font-medium">Distribución de votos globales acumulados</p>
               </div>
-              <img 
-                src="/assets/logocala.jpg" 
-                alt="Escudo Calasanz" 
-                className="w-12 h-12 object-contain rounded-xl border border-slate-255 bg-white p-0.5 shadow-sm" 
+              <img
+                src="/assets/logocala.jpg"
+                alt="Escudo Calasanz"
+                className="w-12 h-12 object-contain rounded-xl border border-slate-255 bg-white p-0.5 shadow-sm"
               />
             </div>
 
@@ -126,7 +126,7 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
                   <span className="text-slate-800">{votosTotales}</span>
                 </div>
                 <div className="h-3 w-full bg-slate-100 border border-slate-200/50 rounded-full overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full transition-all duration-1000 shadow-[0_0_8px_rgba(6,182,212,0.2)]"
                     style={{ width: `${(votosTotales / totalBarMax) * 100}%` }}
                   />
@@ -140,7 +140,7 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
                   <span className="text-[#06b6d4]">{votosValidos}</span>
                 </div>
                 <div className="h-3 w-full bg-slate-100 border border-slate-200/50 rounded-full overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full transition-all duration-1000 shadow-[0_0_8px_rgba(16,185,129,0.2)]"
                     style={{ width: `${(votosValidos / totalBarMax) * 100}%` }}
                   />
@@ -154,7 +154,7 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
                   <span className="text-amber-600">{votosBlancos}</span>
                 </div>
                 <div className="h-3 w-full bg-slate-100 border border-slate-200/50 rounded-full overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-amber-500/80 rounded-full transition-all duration-1000 shadow-[0_0_8px_rgba(245,158,11,0.2)]"
                     style={{ width: `${(votosBlancos / totalBarMax) * 100}%` }}
                   />
@@ -168,7 +168,7 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
                   <span className="text-rose-600">{votosNulos}</span>
                 </div>
                 <div className="h-3 w-full bg-slate-100 border border-slate-200/50 rounded-full overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-rose-500/85 rounded-full transition-all duration-1000 shadow-[0_0_8px_rgba(239,68,68,0.2)]"
                     style={{ width: `${(votosNulos / totalBarMax) * 100}%` }}
                   />
@@ -182,7 +182,7 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
                   <span className="text-slate-600 font-bold">{votosNoUso}</span>
                 </div>
                 <div className="h-3 w-full bg-slate-100 border border-slate-200/50 rounded-full overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-slate-400 rounded-full transition-all duration-1000 shadow-[0_0_8px_rgba(148,163,184,0.2)]"
                     style={{ width: `${(votosNoUso / totalBarMax) * 100}%` }}
                   />
@@ -199,11 +199,11 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
       </div>
 
       {/* 2. GRÁFICO CIRCULAR 3D VOTOS VÁLIDOS */}
-      <div 
+      <div
         className="glass-panel p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between items-center min-h-[380px] bg-white transition-all duration-500"
       >
         <div className="absolute top-0 left-0 w-full h-[3px] bg-[#06b6d4]" />
-        
+
         {!toggles.showValidosChart ? (
           <div className="flex-grow flex flex-col items-center justify-center text-center p-4 space-y-4 my-auto h-full w-full">
             <div className="w-16 h-16 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center text-cyan-600 animate-pulse shadow-sm">
@@ -225,13 +225,13 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
 
             {/* Cesta 3D Isometric */}
             <div className="relative w-44 h-44 my-4 flex items-center justify-center" style={{ perspective: '800px' }}>
-              
-              {/* Sombra de la torta 3D */}
+
+              {/* Sombra de la Gráfico de 3D */}
               <div className="absolute bottom-[-10px] w-36 h-8 bg-slate-400/25 rounded-full blur-md transform -rotate-x-12" />
 
               {/* Gráfico circular con rotación 3D */}
               <div className="w-36 h-36 transform rotate-x-[50deg] rotate-z-[-20deg] preserve-3d transition-transform duration-700 hover:rotate-x-[40deg] cursor-pointer">
-                
+
                 {/* Capa de Extrusión 3D inferior (da espesor) */}
                 <div className="absolute inset-0 translate-z-[-12px] opacity-70">
                   <svg viewBox="-1 -1 2 2" className="w-full h-full transform scale-[0.98]">
@@ -263,7 +263,7 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
                   <div>{votosValidos > 0 ? ((votosSuma / votosValidos) * 100).toFixed(1) : 0}%</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-2">
                 <span className="w-3 h-3 rounded-full bg-[#FF8200] block shadow-[0_0_6px_rgba(255,130,0,0.3)]" />
                 <div className="text-xs text-slate-500">
@@ -277,11 +277,11 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
       </div>
 
       {/* 3. GRÁFICO CIRCULAR 3D GLOBAL */}
-      <div 
+      <div
         className="glass-panel p-6 rounded-3xl relative overflow-hidden flex flex-col justify-between items-center min-h-[380px] bg-white transition-all duration-500"
       >
         <div className="absolute top-0 left-0 w-full h-[3px] bg-[#FF8200]" />
-        
+
         {!toggles.showGlobalesChart ? (
           <div className="flex-grow flex flex-col items-center justify-center text-center p-4 space-y-4 my-auto h-full w-full">
             <div className="w-16 h-16 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-600 animate-pulse shadow-sm">
@@ -303,13 +303,13 @@ export const Visualizations: React.FC<VisualizationsProps> = ({ metrics, parties
 
             {/* Cesta 3D Isometric */}
             <div className="relative w-44 h-44 my-4 flex items-center justify-center" style={{ perspective: '800px' }}>
-              
+
               {/* Sombra */}
               <div className="absolute bottom-[-10px] w-36 h-8 bg-slate-400/25 rounded-full blur-md transform -rotate-x-12" />
 
               {/* Gráfico circular con rotación 3D */}
               <div className="w-36 h-36 transform rotate-x-[50deg] rotate-z-[-40deg] preserve-3d transition-transform duration-700 hover:rotate-x-[40deg] cursor-pointer">
-                
+
                 {/* Capa de Extrusión 3D inferior */}
                 <div className="absolute inset-0 translate-z-[-12px] opacity-70">
                   <svg viewBox="-1 -1 2 2" className="w-full h-full transform scale-[0.98]">
