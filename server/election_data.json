@@ -1,6 +1,6 @@
 {
   "electionClosed": false,
-  "initialized": true,
+  "initialized": false,
   "activeTablesCount": 5,
   "partiesConfig": {
     "SUMA": {
@@ -13,7 +13,7 @@
       "presidentPhoto": "/assets/suma_president.png"
     },
     "MISH": {
-      "name": "Partido MISH",
+      "name": "Movimiento MISH",
       "color": "#FF8200",
       "secondaryColor": "#EA580C",
       "flag": "/assets/mish_flag.png",
@@ -23,9 +23,9 @@
     }
   },
   "revealed": {
-    "metrics": true,
-    "validosChart": true,
-    "globalesChart": true,
+    "metrics": false,
+    "validosChart": false,
+    "globalesChart": false,
     "tables": {
       "table_1": false,
       "table_2": false,
